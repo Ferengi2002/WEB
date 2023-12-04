@@ -1,0 +1,128 @@
+:root{
+    --amarillo: #ffce00;
+    --rojo: #ff0000;
+    --blanco: #fff;
+    --negro: rgb(0,0,0);
+
+}
+*{
+    border: #ff0000 solid 1px;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+@font-face {
+    font-family: "miFuente";
+    src: url(../font/grose.ttf);
+}
+
+
+/*Globales*/
+body{
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+p{
+    font-size: 1.8rem;
+    font-size: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+    text-align: justify;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1,h2,h3{
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuentePrincipal);
+
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 3.2rem;
+
+}
+
+
+h3{
+    font-size: 2rem;
+}
+
+/*Header*/
+#menu-empresa{
+    background-color: var(--amarillo);
+    padding: 1rem 0;
+}
+
+.logo{
+    font-family: "mifuente";
+}
+
+header section ul{
+    list-style-type:none;
+    margin: 0rem;
+}
+header section ul li{
+    display: inline-block;
+}
+
+#menu-buscador{
+    background-color: #615656;
+    padding: 1rem 0;
+    text-align: center;
+    padding: 1rem 0;
+    
+}
+
+#menu-continentes{
+    background: rgb(0,0,255); 
+    color: var(--blanco);
+    text-align: center;
+}
+
+#menu-continentes a{
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+#menu-continentes ul li{
+    margin: 0 .5rem;
+}
+
+#menu-buscador input[type="text"]{
+    border-radius: 1rem 0rem 0rem 1rem ;
+    padding: .5rem;
+    border: .1rem solid var(--negro);
+}
+
+#menu-buscador input[type="submit"]{
+    border-radius: 0rem 1rem 1rem 0rem ;
+    padding: .5rem;
+    border: .1rem solid var(--negro);
+}
