@@ -3,11 +3,10 @@
     --rojo: #ff0000;
     --blanco: #fff;
     --negro: rgb(0,0,0);
+    --azul: rgb(0,0,255);
 
 }
-*{
-    border: #ff0000 solid 1px;
-}
+
 
 
 html {
@@ -28,9 +27,9 @@ html {
 
 /*Globales*/
 body{
-    background-color: var(--primario);
     font-size: 1.6rem;
     line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 p{
@@ -76,12 +75,31 @@ h3{
 
 /*Header*/
 #menu-empresa{
-    background-color: var(--amarillo);
-    padding: 1rem 0;
+    background: hsl(212,100%,50%);
+    padding: 1.5rem ;
+    
 }
+
+#menu-empresa ul{
+    display: inline;
+}
+
+#menu-empresa a{
+    color: #FFF;
+    text-decoration: none;
+}
+
+#menu-empresa ul li{
+    pafing: 0 1.5rem;
+}
+
+
 
 .logo{
     font-family: "mifuente";
+    display: inline;
+    color: #fff;
+    font-size: 1.6rem;
 }
 
 header section ul{
@@ -101,9 +119,11 @@ header section ul li{
 }
 
 #menu-continentes{
-    background: rgb(0,0,255); 
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 31%, rgba(2,160,220,1) 59%, rgba(9,9,121,1) 95%);
     color: var(--blanco);
     text-align: center;
+    padding: 1rem;
 }
 
 #menu-continentes a{
@@ -125,4 +145,77 @@ header section ul li{
     border-radius: 0rem 1rem 1rem 0rem ;
     padding: .5rem;
     border: .1rem solid var(--negro);
+}
+
+.fa-solid{
+    color: #fff;
+    font-size: 1.4rem;
+    float: right;
+}
+
+/**MAIN**/
+
+#mapa_mundi{
+    height: 60rem;
+    background-image: url("../img/27e32e34fc2e85800e984c35756a4f98.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text-mundi{
+    margin-left: 10rem;
+    width: 40rem;
+    color: #FFF;
+    background-color: (35,74,98,1);
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.text-mundi h1{
+    color: var(--amarillo)
+}
+
+
+/**PROYECTOS**/
+
+#proyectos{
+    background: hsl(212,100%,15%);
+    text-align: center;
+    color: #fff;
+}
+
+#proyectos h1{
+    margin:0px;
+    padding: 3rem 0;
+}
+
+#proyectos article{
+    width: 33%;
+    display: inline-block;
+}
+
+#proyectos article h2{
+    color: var(--amarillo);
+    font-size: 1.4rem;
+}
+
+#proyectos article ul{
+    list-style-type: none;
+}
+
+#proyectos article ul li{
+    display: inline-block;
+}
+
+#proyectos article ul li a{
+    text-decoration: none;
+    color: #FFF;
+    margin: 0px 2rem;
+}
+
+#proyectos article img{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    border: #383e3e solid .5rem;
 }
