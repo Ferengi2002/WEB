@@ -1,0 +1,80 @@
+:root{
+    --color1: #A3A656;
+    --color2: #384001;
+    --color3: #FFEFDF;
+    --color4: #F2F6F6;
+
+    --fuenteTitulo1: "Inter, Bold, 4.8rem";
+    --fuenteTitulo2: "Inter, SemiBold, 3.2rem";
+    --fuenteMiniatura: "Inter, Regular, 1.4rem";
+    --fuenteMenu: "Inter, Regular, 1.6rem, uppercase";
+    --fuenteNormal: "Inter, Regular, 1.6rem";
+    --fuentePlaceholder: "Inter, Regular, 1.6rem, #9E9A9A"
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+
+/*Globales*/
+body{
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+p{
+    font-size: 1.8rem;
+    font-size: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+    text-align: justify;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1,h2,h3{
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuentePrincipal);
+
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 3.2rem;
+
+}
+
+
+h3{
+    font-size: 2rem;
+}
+
+/*Header*/
+.nav-background{
+    background: var(--color1);
+    
+}
+
+
