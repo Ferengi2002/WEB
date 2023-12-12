@@ -3,31 +3,8 @@
     --color2: #384001;
     --color3: #FFEFDF;
     --color4: #F2F6F6;
-
-    --fuenteTitulo1: "Inter, Bold, 4.8rem";
-    --fuenteTitulo2: "Inter, SemiBold, 3.2rem";
-    --fuenteMiniatura: "Inter, Regular, 1.4rem";
-    --fuenteMenu: "Inter, Regular, 1.6rem";
-    --fuenteNormal: "Inter, Regular, 1.6rem";
-    --fuentePlaceholder: "Inter, Regular, 1.6rem, #9E9A9A"
+    --color5: #FFFF00;
 }
-
-/*
-
-
-
-
-
-
-
-
-p{
-    font-size: 1.8rem;
-    font-size: Arial, Helvetica, sans-serif;
-}
-
-
-*/
 
 
 /*Header*/
@@ -39,11 +16,16 @@ html {
 
 *, *:before, *:after {
     box-sizing: inherit;
-    border: red solid 1px;
+
 }
 
 body{
     margin: 0;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('fonts/Inter-SemiBold.woff') format('woff');
 }
 
 
@@ -53,14 +35,15 @@ body{
     background-color: var(--color1);
     margin: 0 auto;
     width: 100%;
-    height: 7rem;
+    height: 70px;
 }
 .contenedorHeader nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 35%;
+    width: 50%;
     padding-left: 70px;
+
     
 }
 
@@ -69,20 +52,74 @@ body{
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
-    color
+    font-family: 'Inter', sans-serif;
+    color: #000;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.contenedorHeader nav a:hover{
+    color: var(--color5);
 }
 
 .usuario{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: auto;
+    margin-left: 40rem;
+    
+
     
 }
 
+.usuario .arrow{
+    cursor: pointer;
+}
 
+.usuario .usuarioimg{
+    transform: scale(0.9);
+}
 
 
 .usuario p{
-    padding: 0 1rem;
+    padding: 0 .5rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+
 }
+.usuario p:hover{
+    color: var(--color5);
+}
+
+
+.usuario .micuenta{
+margin-right: 1rem;
+}
+
+/**MAIN**/
+
+.contenedor-imagen {
+    position: relative; /* Necesario para posicionar los elementos hijos relativos a este contenedor */
+    width: 300px; /* Ancho del contenedor */
+    height: 200px; /* Altura del contenedor */
+    overflow: hidden; /* Para ocultar parte de la imagen que exceda el contenedor */
+}
+
+.contenedor-imagen img {
+    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+    height: auto; /* La altura se ajustará automáticamente para mantener la proporción de la imagen */
+    display: block; /* Elimina el espacio adicional por defecto que algunas imágenes tienen por ser elementos en línea */
+}
+
+.texto-superpuesto {
+    position: absolute; /* Posicionamiento absoluto en relación al contenedor */
+    top: 50%; /* Posiciona el texto en la mitad superior del contenedor */
+    left: 50%; /* Posiciona el texto en el centro horizontal del contenedor */
+    transform: translate(-50%, -50%); /* Centra el texto exactamente */
+    color: white; /* Color del texto */
+    font-size: 18px; /* Tamaño de fuente del texto */
+    text-align: center; /* Alineación del texto */
+    /* Otros estilos de texto como font-family, etc. */
+}
+
+
+
