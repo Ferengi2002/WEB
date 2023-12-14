@@ -23,10 +23,7 @@ body{
     margin: 0;
 }
 
-@font-face {
-    font-family: 'Inter';
-    src: url('fonts/Inter-SemiBold.woff') format('woff');
-}
+
 
 
 
@@ -53,6 +50,7 @@ body{
     align-items: center;
     text-decoration: none;
     font-family: 'Inter', sans-serif;
+    font-weight: regular;
     color: #000;
     font-size: 16px;
     text-transform: uppercase;
@@ -66,17 +64,20 @@ body{
     align-items: center;
     justify-content: space-between;
     margin-left: 40rem;
-    
 
-    
 }
 
 .usuario .arrow{
     cursor: pointer;
+
 }
 
 .usuario .usuarioimg{
     transform: scale(0.9);
+}
+
+.usuario .bandera{
+    padding: 1rem;
 }
 
 
@@ -92,34 +93,318 @@ body{
 
 
 .usuario .micuenta{
-margin-right: 1rem;
+margin-right: 2.5rem;
 }
 
 /**MAIN**/
 
 .contenedor-imagen {
-    position: relative; /* Necesario para posicionar los elementos hijos relativos a este contenedor */
-    width: 300px; /* Ancho del contenedor */
-    height: 200px; /* Altura del contenedor */
-    overflow: hidden; /* Para ocultar parte de la imagen que exceda el contenedor */
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-image: url('../material_tarea/images/main.png');
+    background-size: 100% 100%;
+    background-position: center; /* Posición centrada de la imagen */
 }
 
-.contenedor-imagen img {
-    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
-    height: auto; /* La altura se ajustará automáticamente para mantener la proporción de la imagen */
-    display: block; /* Elimina el espacio adicional por defecto que algunas imágenes tienen por ser elementos en línea */
+.contenido-imagen h1{
+    margin: 0%;
+    font-size: 96px;
+    font-family: 'Romanesco', sans-serif;
+    font-weight: normal;
+    padding: 15rem 0 0 15rem;
+    
 }
 
-.texto-superpuesto {
-    position: absolute; /* Posicionamiento absoluto en relación al contenedor */
-    top: 50%; /* Posiciona el texto en la mitad superior del contenedor */
-    left: 50%; /* Posiciona el texto en el centro horizontal del contenedor */
-    transform: translate(-50%, -50%); /* Centra el texto exactamente */
-    color: white; /* Color del texto */
-    font-size: 18px; /* Tamaño de fuente del texto */
-    text-align: center; /* Alineación del texto */
-    /* Otros estilos de texto como font-family, etc. */
+.contenido-imagen h2{
+    font-family:'Inter';
+    font-weight: 600;
+    font-size: 32px;
+    margin-top: 2rem;
+    padding: 0 55rem 0 14rem;
 }
 
+.cita{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: var(--color4);
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.cita label{
+    padding: 0 1rem;
+
+}
+
+.cita input{
+    width: 20rem;
+    height: 4.5rem;
+    border: none;
+    border-radius: 1rem;
+    padding: 0 1rem;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #9E9A9A;
+}
+
+.cita .cita--input{
+    padding-right: 2.5rem;
+}
+
+.cita .cita---input{
+    width: 25rem;
+}
+
+.cita .codigo---input{
+    width: 15rem;
+}
+
+
+.contenedorProductos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0; 
+    width: 100%;
+    margin-top: 100px;
+
+}
+
+.recuadro{
+
+    margin: auto 67px;
+    position: relative;
+    border-radius: 15px 15px 0 0;
+    height: auto;
+    
+}
+
+.recuadro img{
+    width: 100%;
+    height: 70%;
+}
+
+.recuadro h2{
+    margin: 0;
+    padding: 2rem 0;
+    background: var(--color1);
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+}
+
+.recuadro .masajeba{
+    font-size: 3rem;
+}
+
+.recuadro p{
+    margin: 0;
+    padding: 1rem 0;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    color: #000;
+}
+
+.recuadro .precio{
+    display: flex;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.recuadro .precio p{
+    margin: 0;
+    padding: 1rem 0;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 25px;
+    padding-left: 1rem;
+}
+
+.recuadro .precio button{
+    height: 4.5rem;
+    border: none;
+    border-radius: 35px;
+    background-color: var(--color1);
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 0 2rem;
+    margin-left: 70%;
+}
+
+.recuadro .precio button:hover{
+    background-color: var(--color2);
+}
+
+
+.beneficios{
+    background: var(--color4);
+    margin-top: 40px;
+    height: 770px;
+    justify-content: center;
+    align-items: center;
+}
+.beneficios h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 3rem;
+}
+
+.contenedorBeneficios{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0;
+    width: 100%;
+    margin-top: 80px;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.contenedorBeneficios article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-self: start; /* Alinea los elementos en la parte superior */
+}
+
+.contenedorBeneficios .imagenRedonda{
+    width: 255px;
+    height: 255px;
+    border: 10px solid var(--color2);
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorBeneficios .imagenRedonda img {
+    max-width: 233px;
+    max-height: 233px;
+    object-fit: contain;
+    margin: 11px;
+}
+
+.contenedorBeneficios h3{
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+    text-align: center;
+    margin: 0;
+    padding-top: .5rem;
+}
+
+.contenedorBeneficios button{
+    height: 4.5rem;
+    width: 100%;
+    border: none;
+    border-radius: 35px;
+    background-color: var(--color1);
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.contenedorBeneficios button:hover{
+    background-color: var(--color2);
+}
+
+.contenedorBeneficios li{
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    color: #000;
+    margin: 0;
+    padding-top: 1rem;
+    text-align: justify;
+}
+
+/*Footer*/
+
+.contenedorFooter{
+    display: flex;
+    background-color: var(--color2);
+    justify-content: space-between;
+    width: 100%;
+    height: 97px;
+}
+
+.contenedorFooter nav{
+    display: flex;
+    align-items: center;
+    padding-left: 70px;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.contenedorFooter nav a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: normal;
+    color: var(--color1);
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.contenedorFooter nav a:hover{
+    color: var(--color5);
+}
+
+.contenedorFooter .redes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.contenedorFooter .redes p{
+    font-family: 'Inter', sans-serif;
+    font-weight: normal;
+    color: var(--color1);
+    font-size: 16px;
+    text-transform: uppercase;
+    padding-left: 26%;
+    width: auto;
+}
+
+.contenedorFooter .redes .imagenesRedes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    margin: 0 auto;
+    cursor: pointer;
+}
 
 
