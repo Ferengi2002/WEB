@@ -117,12 +117,16 @@ margin-right: 2.5rem;
 }
 
 .contenido-imagen h2{
+    border: 1px solid red;
     font-family:'Inter';
     font-weight: 600;
     font-size: 32px;
     margin-top: 2rem;
-    padding: 0 55rem 0 14rem;
+    margin-left: 13.5rem;
+    margin-right: 60rem;
 }
+
+
 
 .cita{
     display: flex;
@@ -214,6 +218,7 @@ margin-right: 2.5rem;
     font-size: 15px;
     color: #000;
 }
+
 
 .recuadro .precio{
     display: flex;
