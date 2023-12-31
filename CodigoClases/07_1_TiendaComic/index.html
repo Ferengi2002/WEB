@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px auto;
+        }
+        *{
+            font-family: Tahoma;
+            font-size: 16px;
+            color: #666;
+            box-sizing: border-box;
+        }
+
+        /*Colores*/
+        .bg-primario{
+            background: #fff000;
+        }
+        .bg-secundario{
+            background-color: #3941a8;
+        }
+
+
+
+        /* Texto*/
+        .texto-primario{
+            color: blue;
+        }
+        .text-descripcion{
+            font-size: 12px;
+        }
+
+        /*Por seccion: Banner*/
+        .banner{
+            height: 60px;
+        }
+        .nav{
+            height: 40px;
+        }
+        .nav ul{
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+
+        .comics-container{
+            background: #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .item-comic{
+            width: 33.33%;
+        }
+
+        .item-comic img{
+            border-radius: 50%;
+            border: 6px solid #fff000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+            <header class="bg-secundario">
+
+                <div class="banner bg-primario"></div>
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#dc">DC</a></li>
+                        <li><a href="#marvel">Marvel</a></li>
+                    </ul>
+                </nav>
+            </header>
+    </div>
+    
+    <main>
+        <section>
+            <h1 class="texto-primario">Inicio</h1>
+            <p class="text-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ullam soluta vero earum deleniti debitis magni laborum fugiat magnam quos, dolorum ut temporibus sunt adipisci explicabo voluptatibus! Aspernatur, quasi soluta?</p>
+        </section>
+        <section>
+            <h1 class="texto-primario">Marvel</h1>
+            <div class="comics-container">
+                <div class="item-comic">
+                    <img src="https://picsum.photos/200/300">
+                    <p class="text-descripcion">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum odio quo iure fugiat quos accusantium, sapiente illo dolore reprehenderit fugit impedit cupiditate eum architecto, aperiam unde eius itaque ea. Optio?
+                    </p>
+                </div>
+                <div class="item-comic">
+                    <img src="https://picsum.photos/200/300">
+                    <p class="text-descripcion">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum odio quo iure fugiat quos accusantium, sapiente illo dolore reprehenderit fugit impedit cupiditate eum architecto, aperiam unde eius itaque ea. Optio?
+                    </p>
+                </div>
+                <div class="item-comic">
+                    <img src="https://picsum.photos/200/300">
+                    <p class="text-descripcion">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum odio quo iure fugiat quos accusantium, sapiente illo dolore reprehenderit fugit impedit cupiditate eum architecto, aperiam unde eius itaque ea. Optio?
+                    </p>
+                </div>
+            </div>
+            
+        </section>
+        <section>
+            <h1 class="texto-primario">DC</h1>
+            <p class="text-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ullam soluta vero earum deleniti debitis magni laborum fugiat magnam quos, dolorum ut temporibus sunt adipisci explicabo voluptatibus! Aspernatur, quasi soluta?</p>
+        </section>
+        
+
+    </main>
+    <footer>
+        
+    </footer>
+    
+</body>
+</html>

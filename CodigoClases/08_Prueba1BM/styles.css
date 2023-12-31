@@ -1,0 +1,226 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0px;
+}
+
+body{
+    font-family: Verdana, sans-serif;
+}
+
+h1 {
+    font-size: 32px;
+    margin-left: 40px; /* Margen izquierdo para el título "Proyectos" */
+}
+h2{
+    font-size: 24px;
+}
+
+
+:root{
+    --colorPrimarioAzul: #1B6894;
+    --colorSecundarioNaranja: #A45C09;
+    --colorTerciarioGris: #d9d9d9;
+}
+
+
+/*Header*/
+
+.contenedorHeader{
+    background: var(--colorPrimarioAzul);
+    height: 60px;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.contenedorHeader nav{
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+.contenedorHeader nav a{
+    color: white;
+    width: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-decoration: none;
+    justify-content: space-between;
+}
+
+.contenedorHeader nav a:hover{
+    color: #d7fd00;
+}
+
+.contenedorHeader p{
+    display: flex;
+    margin-left: 100px;
+    margin-right: 500px;
+}
+
+/*Main*/
+
+.contenedor{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 122px;
+}
+
+.contenedor_proyectos h1{
+    margin-left: 40px;
+}
+.contenedor-biografia{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 70%;
+    margin-left: 100px;
+}
+.contenedor-imagen img {
+    border-radius: 50%;
+    border: 5px solid var(--colorPrimarioAzul);
+    width: 40%;
+}
+.contenedor-imagen{
+    margin-left: 20px;
+}
+.contenedor-biografia h1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    margin-left: 20px;
+    font-size: 32px;
+}
+
+.contenedor-biografia p{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.contenedor-biografia h2{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.contenedor-biografia button {
+    align-self: flex-start; /* Posiciona el botón a la izquierda */
+    background-color: var(--colorSecundarioNaranja);
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    margin-top: 10px; /* Agrega un espacio superior */
+    margin-left: 20px;
+}
+
+.contenedor-biografia button:hover {
+    background-color: #d7fd00;
+    cursor: pointer;
+}
+
+
+.contenedor_proyectos{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 351px); /* Ancho de 351px para cada columna */
+    grid-auto-rows: 303px; /* Alto de 303px para cada fila */
+    grid-gap: 30px; /* Espacio entre cajas de 30px */
+    margin-left: 122px;
+    margin-right: 122px;
+}
+
+.contenedor-contacto {
+    margin-left: 122px;
+    margin-right: 122px;
+    margin-top: 20px;
+}
+
+.contenedor-contacto h1 {
+    font-size: 32px;
+}
+
+.contenido-contacto {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alínea los elementos arriba */
+}
+
+.imagen-contacto {
+    flex: 0 0 30%; /* Ancho de la imagen */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente la imagen */
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.imagen-contacto img {
+    width: 100%;
+    margin-left: 40px;
+    object-fit: cover;
+}
+
+.info-contacto {
+    flex: 0 50%; /* Ancho para la información de contacto */
+    margin-right: 100px; /* Agregar margen a la derecha */
+}
+
+.imagen-contacto,
+.info-contacto {
+    width: calc(50% - 10px); /* Ancho fijo para ambos elementos */
+}
+
+.info-contacto p,
+.info-contacto input,
+.info-contacto textarea {
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.info-contacto input[type="text"],
+.info-contacto textarea {
+    padding: 15px; /* Añade padding a los input y textarea */
+    border-radius: 10px; /* Añade border-radius */
+}
+
+.info-contacto input[type="text"]::placeholder,
+.info-contacto textarea::placeholder {
+    padding: 8px; /* Añade padding a los placeholders */
+    border-radius: 15px; /* Añade border-radius */
+}
+
+
+
+/*Footer*/
+
+
+.footer_cont {
+    background: var(--colorPrimarioAzul);
+    height: 60px;
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Cambiado a space-between */
+    align-items: center;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.footer_cont div {
+    cursor: pointer;
+    display: flex;
+}
+
+.footer_cont div:hover {
+    color: yellow;
+    
+}
