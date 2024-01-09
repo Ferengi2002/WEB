@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>Selectores</h1>
+    <p id="mielemento"> elemento</p>
+    <p class="miclase"> elemento 2</p>
+
+    <div class="miclase">elemento 3</div>
+    <div id="principal">
+        <p>P1</p>
+        <p>P2</p>
+        <p>P3</p>
+    </div>
+
+
+    <script>
+        /* SELECTORES */
+        var elemento = document.getElementById("mielemento");
+        console.log(elemento.textContent);
+
+        var elementos = document.getElementsByTagName("p");
+        for(var i=0; i<elementos.length; i++){
+            console.log("[" + i + "]: "+elementos[i].textContent);
+        }
+
+        var elementosConClase = document.getElementsByClassName("miclase");
+        for(var i=0; i<elementosConClase.length; i++){
+            console.log("[" + i + "]: "+elementosConClase[i].textContent);
+        }
+
+        /*  SELECTORES AVANZADOS*/
+        var elementoP = document.querySelector("#principal p");
+        console.log("Seleccion con querySelector: " + elementoP.textContent);
+
+        var elementosP = document.querySelectorAll("#principal p");
+        console.log("Elementos con querySelectorAll");
+        for(var i=0; i<elementosP.length; i++){
+            console.log("[" + i + "]: "+elementosP[i].textContent);
+        }
+    </script>
+</body>
+</html>
