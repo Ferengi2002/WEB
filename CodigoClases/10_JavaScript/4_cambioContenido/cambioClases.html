@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mostrar{
+            display: block;
+        }
+        .ocultar{
+            display: none;
+        }   
+        .rojovivo{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        DIV 1
+    </div>
+    <div id="ejemplo" class="mostrar"> DIV 2</div>
+
+    <button onclick="mostrar();">MOSTRAR</button>
+    <button onclick="ocultar();">OCULTAR</button>
+    <button onclick="agregar();">AGREGAR</button>
+    <button onclick="eliminar();">ELIMINAR</button>
+
+
+    <script>
+        function mostrar(){
+            var elemento = document.getElementById('ejemplo');
+            elemento.classList.replace('ocultar','mostrar');
+        }
+        function ocultar(){
+            var elemento = document.getElementById('ejemplo');
+            elemento.classList.replace('mostrar','ocultar');
+            
+        }
+        function agregar(){
+            var elemento = document.getElementById('ejemplo');
+            elemento.classList.add('rojovivo');
+            
+        }
+        function eliminar(){
+            var elemento = document.getElementById('ejemplo');
+            if(elemento.classList.contains('rojovivo')){
+                elemento.classList.remove('rojovivo');
+            }
+            
+        }
+    </script>
+
+</body>
+</html>

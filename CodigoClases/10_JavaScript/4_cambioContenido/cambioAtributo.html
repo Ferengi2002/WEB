@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function comprobarAtributo(){
+            var element = document.querySelector('img');
+            element.hasAttribute('src')
+            console.log(element.hasAttribute('src'));
+        }
+
+        function obtener(){
+            var element = document.querySelector('img');
+            console.log(element.getAttribute('src'));
+        }
+
+        function remover(){
+            var element = document.querySelector('img');
+            element.removeAttribute('src');
+            console.log("Elemento Eliminado");
+        }
+
+        function configurar(){
+            var element = document.querySelector('img');
+            console.log(element.setAttribute('src',''));
+        }
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <h1>Cambio de Atributos en elemento HTML</h1>
+    <h2>Cambio de atributo SRC de una IMG</h2>
+    <img src="https://picsum.photos/200/300" alt="">
+    <h3>Haga click en cada funcion para ver el resultado</h3>
+    <ul>
+        <li onclick="comprobarAtributo();">img.hasAttribute('src')</li>
+        <li onclick="obtener();"> img.getAttribute('src')</li>
+        <li onclick="remover();">img.removerAttribute('src')</li>
+        <li onclick="configurar();">img.setAttribute('src')</li>
+    </ul>
+</body>
+</html>
