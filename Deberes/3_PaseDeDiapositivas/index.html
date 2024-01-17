@@ -9,33 +9,70 @@
 <body>
     <div id="marco-total">
         <div id="lista" class="">
-            <div class="toggle-btn">
+            <div class="toggle-btn" onclick="menuDespegable()">
                 <span>&#9776;</span>
             </div>
             <ul>
-                <li>Slide 1</li>
-                <li>Slide 2</li>
-                <li>Slide 3</li>
-                <li>Slide 4</li>
-                <li>Slide 5</li>
-                <li>Slide 6</li>
-                <li>Slide 7</li>
-                <li>Slide 8</li>
+                <li onclick="cambiarDiapositiva(1)">Slide 1</li>
+                <li onclick="cambiarDiapositiva(2)">Slide 2</li>
+                <li onclick="cambiarDiapositiva(3)">Slide 3</li>
+                <li onclick="cambiarDiapositiva(4)">Slide 4</li>
+                <li onclick="cambiarDiapositiva(5)">Slide 5</li>
+                <li onclick="cambiarDiapositiva(6)">Slide 6</li>
+                <li onclick="cambiarDiapositiva(7)">Slide 7</li>
+                <li onclick="cambiarDiapositiva(8)">Slide 8</li>
             </ul>
         </div>
         <div id="container">
-            <img src=" " width="100%"/>
+            <img id="imagenDiapositiva" src="Diapositiva1.jpeg" width="100%"/>
         </div>
         <div id="controls">
-            <button id="btnRetroceder" class="boton-personalizado">back</button>
+            <button id="btnRetroceder" class="boton-personalizado" onclick="retrocederDiapositiva()">back</button>
                  <span class="contador">
-                     <span id="slideActual"></span>/
-                     <span id="totalSlides"></span>
+                     <span id="slideActual">1</span>/
+                     <span id="totalSlides">8</span>
                  </span>
-            <button id="btnAvanzar" class="boton-personalizado">next</button>
+            <button id="btnAvanzar" class="boton-personalizado" onclick="avanzarDiapositiva()">next</button>
         </div>
     </div>
      <input id="num_slides" type="hidden" value="8"/>
-    <script src="recursos/app.js"></script>
+
+
+     
+    <script>
+        var numSlides = parseInt(document.getElementById('num_slides').value);
+        var slideActual = 1;
+
+        function cambiarDiapositiva(numero) {
+            if (numero >= 1 && numero <= numSlides) {
+                slideActual = numero;
+                actualizarDiapositiva();
+            }
+        }
+
+        function retrocederDiapositiva() {
+            if (slideActual > 1) {
+                slideActual--;
+                actualizarDiapositiva();
+            }
+        }
+
+        function avanzarDiapositiva() {
+            if (slideActual < numSlides) {
+                slideActual++;
+                actualizarDiapositiva();
+            }
+        }
+
+        function actualizarDiapositiva() {
+            document.getElementById('imagenDiapositiva').src = 'Diapositiva' + slideActual + '.jpeg';
+            document.getElementById('slideActual').innerText = slideActual;
+        }
+
+        function menuDespegable() {
+            var lista = document.getElementById('lista');
+            lista.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
