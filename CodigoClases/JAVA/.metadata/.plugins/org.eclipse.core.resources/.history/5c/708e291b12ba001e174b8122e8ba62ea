@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<a href="">Listar libros</a>
+	<form method="POST" action="bibliotecaController">
+		<input type="text" id="txtIsbn" name="isbn"/>
+		<input type="submit" value="Buscar"/>
+	
+	</form>
+	
+	
+</body>
+</html>

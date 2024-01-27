@@ -1,0 +1,36 @@
+package controlador;
+
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import modelo.LIbro;
+
+@WebServlet("/EliminarLibro")
+public class EliminarLibroServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        // Obtener el ISBN del libro a eliminar desde el formulario
+        String isbn = request.getParameter("isbn");
+
+        // Llamar al método en el modelo para eliminar el libro
+        List<LIbro> libros = LIbro.getLibros();
+        for (LIbro libro : libros) {
+            if (libro.getIsbn().equals(isbn)) {
+                libros.remove(libro);
+                break;
+            }
+        }
+
+        // Redirigir de nuevo a la página de lista de libros
+        response.sendRedirect("listaLibro.jsp");
+    }
+}

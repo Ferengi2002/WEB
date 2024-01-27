@@ -1,0 +1,31 @@
+package controlador;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import modelo.LIbro;
+
+@WebServlet("/ActualizarLibro")
+public class ActualizarLibroServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        // Obtener el ISBN del libro a actualizar desde el formulario
+        String isbn = request.getParameter("isbn");
+
+        // Llamar al método en el modelo para obtener el libro correspondiente
+        LIbro libro = LIbro.getLibrosByIsbn(isbn);
+
+        // Puedes redirigir a una página de actualización con el libro como atributo, 
+        // o hacer la lógica de actualización aquí directamente.
+
+        // Ejemplo de redirección a una página de actualización:
+        request.setAttribute("libro", libro);
+        request.getRequestDispatcher("formularioActualizacion.jsp").forward(request, response);
+    }
+}

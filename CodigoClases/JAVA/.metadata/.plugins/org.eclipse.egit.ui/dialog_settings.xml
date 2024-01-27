@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="CommitDialog.authorValues">
+		<item value="Ferengi2002 &lt;juan.rengifo@epn.edu.ec&gt;"/>
+	</list>
+	<list key="CommitDialog.committerValues">
+		<item value="Ferengi2002 &lt;juan.rengifo@epn.edu.ec&gt;"/>
+	</list>
+	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
+		<item key="MAIN_SASH_FORM_ORIENTATION_VERTICAL" value="false"/>
+		<item key="HORIZONTAL_SASH_FORM_WEIGHT" value="500,500"/>
+		<item key="STAGING_SASH_FORM_WEIGHT" value="500,500"/>
+		<item key="sortItemState" value="false"/>
+	</section>
+	<section name="GitCommitMessageComponent">
+		<list key="E:\ONEDRIVE\OneDrive - Escuela Politécnica Nacional\OH SHIT, HERE WE GO AGAING (V-VI-VII)\WEB\WEB-1\WEB\JAVA_1\.git">
+			<item value="false"/>
+			<item value="Ferengi2002 &lt;juan.rengifo@epn.edu.ec&gt;"/>
+			<item value="Hola"/>
+			<item value="Ferengi2002 &lt;juan.rengifo@epn.edu.ec&gt;"/>
+			<item value="f9c47b1c047bf43b5d73b73be5c1677034d49a96"/>
+			<item value="0"/>
+			<item value="false"/>
+			<item value=""/>
+		</list>
+		<list key="E:\ONEDRIVE\OneDrive - Escuela Politécnica Nacional\OH SHIT, HERE WE GO AGAING (V-VI-VII)\WEB\WEB-1\WEB\.git">
+			<item value="false"/>
+			<item value="Ferengi2002 &lt;juan.rengifo@epn.edu.ec&gt;"/>
+			<item value="HOla"/>
+			<item value="Ferengi2002 &lt;juan.rengifo@epn.edu.ec&gt;"/>
+			<item value="7831c4a27cde38a6d626b66ea3d233cfb74a221d"/>
+			<item value="0"/>
+			<item value="false"/>
+			<item value=""/>
+		</list>
+	</section>
+</section>
