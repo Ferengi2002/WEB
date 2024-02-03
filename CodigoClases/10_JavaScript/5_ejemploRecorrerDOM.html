@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lectura de Nodos de un documento HTML</title>
+</head>
+<body>
+    <p>Este es un texto</p>
+    <div>
+        <p>Párrafo 1 dentro de DIV</p>
+        <!-- este es un comentario -->
+    </div>
+    <p>Es es un segundo párrafo <span class="importante">que será leído</span></p>
+
+    <script>
+        function recursividad(nodo) {
+            // Obtener la lista de nodos hijos del nodo actual
+            var arrayNodos = nodo.childNodes;
+    
+            // Iterar sobre cada nodo hijo
+            arrayNodos.forEach(element => {
+                // Mostrar información sobre el nodo actual
+                console.log("=========================");
+                console.log("El nodo " + element.nodeName + " es de tipo : (" + element.nodeType + ") y su valor es: " + element.nodeValue);
+                console.log("Nodo Padre: " + element.parentNode);
+            });
+    
+            // Verificar si el nodo actual tiene nodos hijos
+            if (element.hasChildNodes) {
+                // Llamada recursiva para explorar los nodos hijos
+                recursividad(element);
+            }
+        }
+    
+        // Iniciar la recursividad desde el nodo body del documento
+        recursividad(document.body);
+    </script>
+</body>
+</html>

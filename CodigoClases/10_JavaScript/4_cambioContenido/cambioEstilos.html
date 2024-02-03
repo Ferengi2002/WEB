@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ejemplo{
+            height: 100px;
+            width: 100px;
+            border: 3px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div>DIV NORMAL</div>
+    <div>DIV MODIFICADO</div>
+
+
+    <script>
+        //forma 1
+        const div = document.querySelector("div:nth-child(2)");
+        //div.setAttribute("style", "height: 100px; width: 100px; border: 3px solid blue;");
+
+        //forma 2
+        div.style.display="flex";
+        div.style.borderRadius = "50%";
+        div.style.marginLeft = "40px";
+        div.style.alignItems = "center";
+        div.style.border = "3px solid blue";
+    </script>
+
+</body>
+</html>

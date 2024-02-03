@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function mostrarMensaje(){
+            console.log("Manejador como propiedad- Se hizo click");
+        }
+
+        function mostrarMensajeElemento(elementoHTML){
+            console.log(elementoHTML.textContent);
+
+        }
+
+        function inicializar(){
+            /*
+            var Varparrafo = document.getElementsByTagName("p")[1];
+            console.log(Varparrafo.textContent);
+            Varparrafo.onclick = mostrarMensaje;
+            */
+
+            var element = document.getElementsByTagName("p")[1];
+            element.addEventListener('click',function(){
+                mostrarMensajeElemento(this)
+                //mostrarMensajeElemento(element) --> Es lo mismo
+            });
+
+
+            var varParrafo3 = document.getElementsByTagName("p")[2];
+            console.log(varParrafo3.textContent);
+            varParrafo3.addEventListener('click', mostrarMensaje)
+        }
+
+        window.onload = inicializar;
+
+    </script>
+</head>
+<body>
+    <h1>Forma 1: en linea</h1>
+    <p onclick="mostrarMensaje()">Hacer Click</p>
+
+    <h1>Forma 2: Manejador como propiedades</h1>
+    <p>Hacer Click (Forma 2)</p>
+
+    <h1>Forme 3: AddEventListener</h1>
+    <p>Hacer Click (Forma 3)</p>
+</body>
+</html>
